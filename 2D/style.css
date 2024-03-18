@@ -1,0 +1,506 @@
+
+@keyframes left {
+  100% { transform: rotate(-360deg) }
+}
+
+@keyframes right {
+  100% { transform: rotate(360deg) }
+}
+
+
+/* ---------- Animation ---------- */
+@-webkit-keyframes spin-right {
+  100% {
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+
+@keyframes rot {
+   from {
+      transform: rotate(0deg)
+      translate(-10px)
+      rotate(0deg);
+      -webkit-transform: rotate(0deg)
+      translate(-10px)
+      rotate(0deg);
+   }
+   to {
+      transform: rotate(360deg)
+      translate(-10px)
+      rotate(-360deg);
+      -webkit-transform: rotate(360deg)
+      translate(-10px)
+      rotate(-360deg);
+   }
+}
+@-webkit-keyframes rot {
+   from {
+      transform: rotate(0deg)
+      translate(-10px)
+      rotate(0deg);
+      -webkit-transform: rotate(0deg)
+      translate(-10px)
+      rotate(0deg);
+   }
+   to {
+      transform: rotate(360deg)
+      translate(-10px)
+      rotate(-360deg);
+      -webkit-transform: rotate(360deg)
+      translate(-10px)
+      rotate(-360deg);
+   }}@keyframes rotInverted {   from {                 transform: rotate(360deg)       translate(-10px)       rotate(-360deg);       -webkit-transform: rotate(360deg)       translate(-10px)
+      rotate(-360deg);
+
+   }
+   to {
+       transform: rotate(0deg)
+       translate(-10px)
+       rotate(0deg);
+       -webkit-transform: rotate(0deg)
+       translate(-10px)
+       rotate(0deg);
+   }
+}
+@-webkit-keyframes rotInverted {
+   from {
+       transform: rotate(360deg)
+       translate(-10px)
+       rotate(-360deg);
+       -webkit-transform: rotate(360deg)
+       translate(-10px)
+       rotate(-360deg);
+
+   }
+   to {
+       transform: rotate(0deg)
+       translate(-10px)
+       rotate(0deg);
+       -webkit-transform: rotate(0deg)
+       translate(-10px)
+       rotate(0deg);
+   }
+}
+
+
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: white;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+button {
+  border: none;
+  font-size: 20px;
+  color: white;
+  cursor: pointer;
+  position: absolute;
+  margin: 0;
+
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+}
+
+.container {
+       width: 100%;
+       height: 100%;
+  border-radius: 0%;
+}
+
+.blurLayer {
+       
+    -webkit-filter: blur(7px); /* Chrome, Safari, Opera */
+    filter: blur(7px);
+       position: absolute; 
+       background-color: transparent; 
+       width: 80%, 
+       height: 80%; 
+       left: 50%; top: 50%; 
+       transform: translate(-50%, -50%);
+
+       -web-kit-transform: translate(-50%, -50%);
+       z-index: 1;
+       
+       
+       
+}
+
+
+.animationInverted {
+       width: 100%;
+       height: 100%;
+    -webkit-animation: rotInverted 17s linear infinite;
+    animation: rotInverted 17s infinite linear;
+}
+
+.animation {
+       width: 100%;
+       height: 100%;
+    -webkit-animation: rot 17s linear infinite;
+    animation: rot 17s infinite linear;
+}
+
+
+.containerCollapsed{
+       left: 50%;
+       bottom: 100px;
+       width: 1px;
+       height: 1px;
+}
+
+
+#buttonAnimation { 
+       background: yellow;
+    -webkit-animation: rot 10s linear infinite;
+    animation: rot 10s infinite linear;
+       color: black;
+}
+
+
+
+
+#closeButtonContainer{
+       position: absolute; 
+       bottom: 0px; 
+       left: 50%; 
+       background-color: transparent; 
+       transform: translate(-50%, -50%); 
+       width: 100px; 
+       height: 100px;  
+       transition: transform 1s ease;
+       z-index:9999;
+}
+
+
+#closeButton { 
+       background: #fcd5e3;
+    -webkit-filter: blur(5px); /* Chrome, Safari, Opera */
+    filter: blur(5px);
+       position:relative; 
+       left: 50%;
+       top:50%; 
+       width: 100%; 
+       height: 100%; 
+       transform: translate(-50%, -50%);
+       -web-kit-transform: translate(-50%, -50%);
+       
+}
+
+
+/* GIFT *********** */
+#giftButtonContainer{
+
+       position: absolute; 
+       bottom:0px;
+       background-color: transparent; 
+       width: 150px;
+       height: 150px;
+       left: 50%;
+       
+       transition: transform 1s ease;
+    transform: translate(0px, -150px); 
+    -webkit-transform: translate(0px, -150px); 
+}
+
+#giftButton { 
+       
+       
+    -webkit-filter: blur(5px); /* Chrome, Safari, Opera */
+    filter: blur(5px);
+       background: #fddbe8;
+       color: black;
+       position: relative;
+       left: 50%;
+       top:50%; 
+       width: 100%; 
+       height: 100%; 
+       transform: translate(-50%, -50%);
+       -web-kit-transform: translate(-50%, -50%);
+}
+
+
+.subButton{
+
+       position: absolute; 
+       bottom:0px;
+       background-color: transparent; 
+       width: 100px;
+       height: 100px;
+       left: 50%;
+       top: 50%;
+       transition: transform 1s ease;
+    transform: translate(-50%, -50%) scale(0.0); 
+    -webkit-transform: translate(-50%, -50%) scale(0.0); 
+
+       pointer-events: none;
+        
+}
+
+
+
+#giftSubButton { 
+       
+       
+    -webkit-filter: blur(5px); /* Chrome, Safari, Opera */
+    filter: blur(5px);
+       background: #fddbe8;
+       color: black;
+       position: relative;
+       left: 50%;
+       top:50%; 
+       width: 100%; 
+       height: 100%; 
+       transform: translate(-50%, -50%);
+       -web-kit-transform: translate(-50%, -50%);
+}
+/* ****************** */
+
+
+
+/* FRAGRANCES *********** */
+#fragrancesButtonContainer{
+
+       width: 200px;
+       height: 200px;
+       position: absolute;
+       left: 50%;
+       bottom: 0px;
+    transform: translate(-200px, -150px); /* Standard transform property */
+    -webkit-transform: translate(-200px, -150px); /* WebKit-specific prefix */
+       transition: transform 1s ease;
+}
+
+#fragrancesButton { 
+    -webkit-filter: blur(5px); /* Chrome, Safari, Opera */
+    filter: blur(5px);
+       background: #dbffde;
+       color: black;
+       position: relative;
+       left: 50%;
+       top:50%; 
+       width: 100%; 
+       height: 100%; 
+       transform: translate(-50%, -50%);
+       -web-kit-transform: translate(-50%, -50%);
+}
+/***********************/
+
+
+
+/* HAIR **********************/
+#hairButtonContainer{
+       width: 150px;
+       height: 150px;
+       position: absolute;
+       left: 50%;
+       bottom: 0px;
+    transform: translate(50px, -300px); /* Standard transform property */
+    -webkit-transform: translate(50px, -300px); /* WebKit-specific prefix */
+       transition: transform 1s ease;
+}
+
+
+#hairButton { 
+    -webkit-filter: blur(5px); /* Chrome, Safari, Opera */
+    filter: blur(5px);
+       background: #fdeac3;
+       color: black;
+       position: relative;
+       left: 50%;
+       top:50%; 
+       width: 100%; 
+       height: 100%; 
+       transform: translate(-50%, -50%);
+       -web-kit-transform: translate(-50%, -50%);
+}
+/***********************/
+
+
+
+/*FACES **********************/
+#facesButtonContainer{
+       width: 200px;
+       height: 200px;
+       position: absolute;
+       left: 50%;
+       bottom: 0px;
+    transform: translate(-120px, -350px); 
+    -webkit-transform: translate(-120px, -350px);
+       transition: transform 1s ease;
+}
+
+
+
+
+#facesButton { 
+    -webkit-filter: blur(5px); /* Chrome, Safari, Opera */
+    filter: blur(5px);
+       background: #d6f5f7;
+       color: black;
+       position: relative;
+       left: 50%;
+       top:50%; 
+       width: 100%; 
+       height: 100%; 
+       transform: translate(-50%, -50%);
+       -web-kit-transform: translate(-50%, -50%);
+}
+/***********************/
+
+
+
+/* BODY**********************/
+#bodyButtonContainer{
+
+       width: 120px;
+       height: 120px;
+       position: absolute;
+       left: 50%;
+       bottom: 0px;
+    transform: translate(-250px, -400px); /* Standard transform property */
+    -webkit-transform: translate(-250px, -400px); /* WebKit-specific prefix */
+       transition: transform 1s ease;
+}
+#bodyButton { 
+    -webkit-filter: blur(5px); /* Chrome, Safari, Opera */
+    filter: blur(5px);
+       background: #9cc7fb;
+       color: black;
+       position: relative;
+       left: 50%;
+       top:50%; 
+       width: 100%; 
+       height: 100%; 
+       transform: translate(-50%, -50%);
+       -web-kit-transform: translate(-50%, -50%);
+}
+/***********************/
+
+
+
+/* Experiences **********************/
+#experiencesButtonContainer{
+
+       width: 200px;
+       height: 200px;
+       position: absolute;
+       left: 50%;
+       bottom: 0px;
+    transform: translate(50px, -475px); /* Standard transform property */
+    -webkit-transform: translate(50px, -475px); /* WebKit-specific prefix */
+       transition: transform 1s ease;
+}
+#experiencesButton { 
+    -webkit-filter: blur(5px); /* Chrome, Safari, Opera */
+    filter: blur(5px);
+       background: #fdbba2;
+       color: black;
+       position: relative;
+       left: 50%;
+       top:50%; 
+       width: 100%; 
+       height: 100%; 
+       transform: translate(-50%, -50%);
+       -web-kit-transform: translate(-50%, -50%);
+}
+/***********************/
+
+
+
+/* Bath **********************/
+#bathButtonContainer{
+
+       width: 150px;
+       height: 150px;
+       position: absolute;
+       left: 50%;
+       bottom: 0px;
+    transform: translate(-150px, -550px); /* Standard transform property */
+    -webkit-transform: translate(-150px, -550px); /* WebKit-specific prefix */
+       transition: transform 1s ease;
+}
+#bathButton { 
+    -webkit-filter: blur(5px); /* Chrome, Safari, Opera */
+    filter: blur(5px);
+       background: #fffcb8;
+       color: black;
+       position: relative;
+       left: 50%;
+       top:50%; 
+       width: 100%; 
+       height: 100%; 
+       transform: translate(-50%, -50%);
+       -web-kit-transform: translate(-50%, -50%);
+}
+/***********************/
+
+
+
+
+
+
+
+
+.labelContainer {
+       background-color: transparent; 
+       position: absolute; 
+       z-index:999; 
+       display: inline; 
+       left: 50%;
+       top: 50%;
+       justify-content: center; /* horizontally center */
+       align-items: center;
+       pointer-events: none;
+       transform: translate(-50%, -50%);
+       -web-kit-transform: translate(-50%, -50%);
+}
+
+.buttonLabel {
+       color: black;
+       z-index: 999;
+       top: 50%;
+       position: absolute;
+       left: 50%;
+       top: 50%;
+       width: 100%;
+       height: 100%;
+       display: flex;
+    justify-content: center; /* horizontally center */
+    align-items: center; /* vertically center */
+       transform: translate(-50%, -50%);
+       -web-kit-transform: translate(-50%, -50%);
+       
+
+}
+
+.buttonLabelWhite {
+       color: white;
+       z-index: 999;
+       position: absolute;
+       top: 50%;
+       left: 50%;
+       width: 100%;
+       height: 100%;
+       background-color: red;
+
+       transform: translate(-50%, -50%);
+       -web-kit-transform: translate(-50%, -50%);
+    justify-content: center; /* horizontally center */
+    align-items: center; /* vertically center */
+       pointer-events: none;
+
+
+}
